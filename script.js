@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const promoBadge = document.getElementById('promo-badge');
     if (promoBadge) {
         const messages = [
-            'DEALS OPEN NOW',
-            'DEALS OPEN NOW',
+            'Deals Open Now',
+            'Deals Open Now',
             'LIMITED TIME OFFERS'
         ];
         let currentMsgIndex = 0;
