@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scrollAmount = 350; // Amount to scroll per click
 
-    if(btnLeft && btnRight && carousel) {
+    if (btnLeft && btnRight && carousel) {
         btnLeft.addEventListener('click', () => {
             carousel.scrollBy({
                 left: -scrollAmount,
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const fadeInElements = document.querySelectorAll('.fade-in');
-    
+
     // Initially pause animations by resetting the animation property
     fadeInElements.forEach(el => {
         el.style.animationPlayState = 'paused';
@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 // Resume animation when in view
                 entry.target.style.animationPlayState = 'running';
-                
+
                 // Add tiny delay for child elements if they are cards (staggering effect)
-                if(entry.target.classList.contains('menu-section')) {
+                if (entry.target.classList.contains('menu-section')) {
                     const cards = entry.target.querySelectorAll('.pizza-card');
                     cards.forEach((card, index) => {
                         card.style.opacity = '0';
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 150 * (index + 1));
                     });
                 }
-                
+
                 observer.unobserve(entry.target);
             }
         });
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (promoBadge) {
         const messages = [
             'DEALS OPEN NOW',
-            'TRUFFLE MATRIX NOW LIVE',
+            'DEALS OPEN NOW',
             'LIMITED TIME OFFERS'
         ];
         let currentMsgIndex = 0;
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(() => {
             promoBadge.style.opacity = '0';
             promoBadge.style.transform = 'translateY(-10px)';
-            
+
             setTimeout(() => {
                 currentMsgIndex = (currentMsgIndex + 1) % messages.length;
                 promoBadge.textContent = messages[currentMsgIndex];
