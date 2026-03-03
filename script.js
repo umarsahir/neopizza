@@ -91,7 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    fadeInElements.forEach(el => {
-        observer.observe(el);
-    });
+    // --- Promo Badge Text Cycling ---
+    const promoBadge = document.getElementById('promo-badge');
+    if (promoBadge) {
+        const messages = [
+            'DEALS OPEN NOW',
+            'TRUFFLE MATRIX NOW LIVE',
+            'LIMITED TIME OFFERS'
+        ];
+        let currentMsgIndex = 0;
+
+        setInterval(() => {
+            promoBadge.style.opacity = '0';
+            promoBadge.style.transform = 'translateY(-10px)';
+            
+            setTimeout(() => {
+                currentMsgIndex = (currentMsgIndex + 1) % messages.length;
+                promoBadge.textContent = messages[currentMsgIndex];
+                promoBadge.style.opacity = '1';
+                promoBadge.style.transform = 'translateY(0)';
+            }, 500);
+        }, 4000);
+    }
 });
