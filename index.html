@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoPizza | The Future of Pizza</title>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="logo">
+            <span class="logo-accent">NEÒ</span>PIZZA
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#tracker" class="nav-link">Tracker</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn btn-small glass-btn">Sign In</button>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero fade-in">
+        <div class="hero-content">
+            <div class="badge neon-badge">NEW: TRUFFLE MATRIX NOW LIVE</div>
+            <h1 class="hero-title">THE <span class="text-gradient">EVOLUTION</span> OF PIZZA</h1>
+            <p class="hero-subtitle">Handcrafted with precision, powered by passion. Experience the next generation of
+                flavors delivered at the speed of light.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-glowing glow-pulse">Explore Menu</a>
+                <a href="#tracker" class="btn glass-btn">Track Order</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="images/hero.png" alt="3D Premium Pizza" class="hero-pizza floating">
+            <div class="pizza-glow-backdrop"></div>
+        </div>
+    </header>
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="menu-section fade-in">
+        <div class="section-header">
+            <h2 class="section-title">SIGNATURE <span class="text-accent">DISHES</span></h2>
+            <p class="section-subtitle">A fusion of traditional recipes and futuristic culinary techniques.</p>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left" id="scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="menu-carousel" id="menu-carousel">
+                <!-- Pizza Card 1 -->
+                <div class="pizza-card glass">
+                    <div class="card-img-wrapper">
+                        <img src="images/margherita.png" alt="Neo Margherita" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Neo Margherita</h3>
+                        <p>Classic reinvented. Fresh heirloom tomatoes, aged balsamic, and ultra-creamy burrata.</p>
+                        <div class="card-footer">
+                            <span class="price">Rs. 1,499</span>
+                            <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pizza Card 2 -->
+                <div class="pizza-card glass">
+                    <div class="card-img-wrapper">
+                        <img src="images/pepperoni.png" alt="Cyber Pepperoni" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Cyber Pepperoni</h3>
+                        <p>Double-smoked crispy pepperoni cups with hot honey drizzle and spicy parmesan.</p>
+                        <div class="card-footer">
+                            <span class="price">Rs. 1,899</span>
+                            <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pizza Card 3 -->
+                <div class="pizza-card glass">
+                    <div class="card-img-wrapper">
+                        <img src="images/truffle.png" alt="Truffle Matrix" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Truffle Matrix</h3>
+                        <p>Wild seasonal mushrooms, caramelized red onions, and shaved black truffle oil.</p>
+                        <div class="card-footer">
+                            <span class="price">Rs. 2,299</span>
+                            <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pizza Card 4 -->
+                <div class="pizza-card glass">
+                    <div class="card-img-wrapper">
+                        <img src="images/supreme.png" alt="Blaze Supreme" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Blaze Supreme</h3>
+                        <p>Spicy Italian sausage, fire-roasted peppers, jalapeños, and crushed red pepper flakes.</p>
+                        <div class="card-footer">
+                            <span class="price">Rs. 2,099</span>
+                            <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pizza Card 5 -->
+                <div class="pizza-card glass">
+                    <div class="card-img-wrapper">
+                        <img src="images/veggie.png" alt="Quantum Veggie" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Quantum Veggie</h3>
+                        <p>Artichokes, baby spinach, roasted garlic, and plant-based artisanal mozzarella.</p>
+                        <div class="card-footer">
+                            <span class="price">Rs. 1,699</span>
+                            <button class="btn-icon"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right" id="scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Live Tracker Concept UI -->
+    <section id="tracker" class="tracker-section fade-in">
+        <h2 class="section-title">REAL-TIME <span class="text-accent">RADAR</span></h2>
+        <div class="tracker-container glass">
+            <div class="radar">
+                <div class="radar-sweep"></div>
+                <div class="radar-dot dot-origin"></div>
+                <div class="radar-dot dot-driver"></div>
+
+                <div class="radar-rings">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                </div>
+            </div>
+
+            <div class="tracker-info">
+                <h3>STATUS: <span class="text-accent pulse-text">OUT FOR DELIVERY</span></h3>
+                <p class="eta">ESTIMATED ARRIVAL: <span class="time">12 MINS</span></p>
+
+                <div class="progress-bar-container">
+                    <div class="progress-step completed">
+                        <div class="step-icon"><i class="fas fa-check"></i></div>
+                        <span>PREP</span>
+                    </div>
+                    <div class="progress-line completed"></div>
+                    <div class="progress-step completed">
+                        <div class="step-icon"><i class="fas fa-fire"></i></div>
+                        <span>BAKE</span>
+                    </div>
+                    <div class="progress-line active"></div>
+                    <div class="progress-step active glow">
+                        <div class="step-icon"><i class="fas fa-motorcycle"></i></div>
+                        <span>ROUTE</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-icon"><i class="fas fa-home"></i></div>
+                        <span>ARRIVE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Footer -->
+    <footer id="contact" class="footer glass-dark">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-accent">NEÒ</span>PIZZA
+                </div>
+                <p>Redefining delivery. One slice at a time. Join the revolution.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>NETWORK</h4>
+                    <ul>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Franchise</a></li>
+                        <li><a href="#">Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>SYSTEM</h4>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>THE DROP</h4>
+                <p>Join our priority list for exclusive drops and limited releases.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault()">
+                    <input type="email" placeholder="NEO_ID@EMAIL.COM" required class="glass-input">
+                    <button type="submit" class="btn btn-accent"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NeoPizza Systems. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
