@@ -91,6 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    fadeInElements.forEach(el => {
+        observer.observe(el);
+    });
+
     // --- Promo Badge Text Cycling ---
     const promoBadge = document.getElementById('promo-badge');
     if (promoBadge) {
